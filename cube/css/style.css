@@ -390,7 +390,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .gtco-client {
   float: left;
   width: 100%;
-  padding: 3em 0;
+  padding: 2em 0;
   background: #f6f6f6;
 }
 .gtco-client .client img {
@@ -548,13 +548,13 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .gtco-testimonial .gtco-testimony {
-  float: left;
+  float: right;
   width: 100%;
   margin-bottom: 30px;
 }
 .gtco-testimonial .gtco-left > div {
-  display: table-cell;
-  float: left;
+  display: grid;
+  float: right;
   width: 80px;
 }
 .gtco-testimonial .gtco-left > div img {
@@ -562,14 +562,17 @@ h1, h2, h3, h4, h5, h6, figure {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
-  max-width: 100% !important;
+  max-width: 300% !important;
+  opacity: 0.5;
+  transition: .5s ease;
+  backface-visibility: hidden;
 }
 .gtco-testimonial .gtco-left > blockquote {
   padding-left: 20px;
   display: table-cell;
   border-left: none;
   margin: 0;
-  padding: 0 0 0 30px;
+  padding: 0 0 0 0px;
 }
 .gtco-testimonial .gtco-left > blockquote p {
   font-style: 16px;
@@ -594,7 +597,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #fff !important;
 }
 #gtco-footer .gtco-cta {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 #gtco-footer .gtco-cta h3 {
   color: #fff;
@@ -609,7 +612,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #gtco-footer .gtco-footer-paragraph h3 {
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 #gtco-footer .gtco-footer-link {
   padding-left: 30px;
@@ -724,8 +727,12 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .gtco-social-icons {
   margin: 0;
-  padding: 0;
+  padding-top: 0;
+  opacity: 0.3;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
 }
+
 .gtco-social-icons li {
   margin: 0;
   padding: 0;
@@ -1881,6 +1888,8 @@ form label {
   background: #4d4d4d;
 }
 
+/* ALL MODIFICATIONS BY ABEL*/ 
+
 /*# sourceMappingURL=style.css.map */
 
 /* DEMO-SPECIFIC STYLES */
@@ -1909,4 +1918,30 @@ form label {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: white }
+}
+
+.mod-container {
+  width: 90%;
+  max-width:900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.animate-box-about{
+  opacity: 0;
+  margin-right: 150px;
+}
+
+.gtco-social-icons-container {
+  position: relative;
+  width: 100%;
+}
+
+.gtco-social-icons-container:hover .gtco-social-icons {
+  opacity: 1.0;
+}
+
+.hover:hover .gtco-left {
+  opacity: 1.0;
 }
