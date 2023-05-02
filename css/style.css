@@ -107,16 +107,30 @@ h1, h2, h3, h4, h5, h6, figure {
     padding: 10px 0;
   }
 }
-.gtco-nav #gtco-logo {
+.gtco-nav #gtco-logo .github-logo{
   font-size: 20px;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
   font-weight: bold;
+  opacity: 0.3;
+  transition: 0.05s ease;
+  backface-visibility: hidden;
+}
+.gtco-nav #gtco-logo .linkedin-logo {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0.3;
+  transition: 0.05s ease;
+  backface-visibility: hidden;
 }
 .gtco-nav #gtco-logo em {
   color: #17B794;
 }
+
 @media screen and (max-width: 768px) {
   .gtco-nav .menu-1, .gtco-nav .menu-2 {
     display: none;
@@ -1938,10 +1952,20 @@ form label {
   width: 100%;
 }
 
-.gtco-social-icons-container:hover .gtco-social-icons {
+.gtco-social-icons-container .gtco-social-icons:hover {
   opacity: 1.0;
 }
 
 .hover:hover .gtco-left {
   opacity: 1.0;
+}
+
+.gtco-nav #gtco-logo .github-logo:hover {
+  opacity: 1.0;
+  transition: 0.5s ease;
+}
+
+.gtco-nav #gtco-logo .linkedin-logo:hover {
+  opacity: 1.0;
+  transition: 0.5s ease;
 }

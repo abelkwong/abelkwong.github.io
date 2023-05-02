@@ -381,3 +381,15 @@ navLinks.forEach(link => {
     });
   });
 });
+
+// Open linked-in link
+document.getElementById("linkedin-link").addEventListener("click", function (event) {
+	event.preventDefault();
+	window.open(this.href, '_blank');
+});
+
+// Open github-link
+document.getElementById("github-link").addEventListener("click", function (event) {
+	event.preventDefault();
+	window.open(this.href, '_blank');
+});
